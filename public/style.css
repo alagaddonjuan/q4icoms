@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    grid-template-columns: 240px 1fr; /* Sidebar width and main content */
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    grid-area: header;
+    padding: 1rem;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 1rem;
+    border-right: 1px solid var(--pico-muted-border-color);
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+    overflow-y: auto; /* Make content scrollable */
+}
